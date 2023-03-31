@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% block title %}Личный кабинет{% endblock %}
+{% block content %}
+<h1>ЛИЧНЫЙ КАБИНЕТ</h1>
+<h3>Информация о пользователе</h3>
+<div style="margin-top: 30px;">
+    <i class="fa-regular fa-circle-user"></i> {{ user.username }} &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-at"></i> {{ user.email }}
+    <br><br>
+    <a href="{% url 'addlink' user.username %}"><button class="btn">Сократить ссылку</button></a>  <a href="{% url 'logout' %}"><button class="btn">Выйти</button></a>
+</div>
+<br><br><br>
+<hr>
+<form class="forms" method="post">
+    <h4>Обновить данные</h4>
+    {% csrf_token %}
+    {{ userForm }}
+    <button class="btn">Обновить</button>
+</form>
+{% endblock %}

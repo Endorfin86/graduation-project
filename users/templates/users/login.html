@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+{% block title %}Вход{% endblock %}
+{% block content %}
+<h1>ВХОД В ЛИЧНЫЙ КАБИНЕТ</h1>
+<h3>Введите логин и пароль для авторизации</h3>
+<div style="margin-top: 50px;">
+    <form class="forms" method="post">
+        {% csrf_token %}
+        {{ form }}
+    <button class="btn">Авторизоваться</button>
+    </form>
+</div>
+{% endblock %}

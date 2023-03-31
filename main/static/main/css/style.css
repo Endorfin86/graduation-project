@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    transition: all .3s;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    color: rgb(14, 99, 226);
+}
+
+hr {
+    background-color: rgb(219, 219, 219); 
+    border: 0px; height: 1px;
+}
+
+.btn {
+    background-color: rgb(14, 99, 226);
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(95%) rotate(2deg);
+    background-color: rgb(9, 83, 194);
+
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 70px;
+
+}
+
+header div:nth-child(1) a {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+div.link > a {
+    line-height: 25px;
+    padding-left: 20px;
+}
+
+.logo {
+    color: #0e63e2;
+}
+
+.mess {
+    margin-top: -200px;
+    animation-name: message;
+    animation-duration: 3s;
+    animation-delay: .3s;
+    animation-fill-mode: both;
+}
+
+@keyframes message {
+    0% {margin-top: -200px;}
+    30% {margin-top: 0px;}
+    90% {margin-top: 0px;}
+    100% {margin-top: -200px;}
+}
+
+
+/* BODY */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 60px 20% 0 20%;
+}
+
+.forms input {
+    display: block;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.forms label {
+    justify-self: self-start;
+    width: 100%;
+    text-align: left;
+}
+
+.errorlist {
+    list-style: none;
+    text-align: left;
+    color: crimson;
+    font-size: 12px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.mylinks {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.mylinks > a {
+    display: block;
+    margin: 20px 0;
+    font-weight: bold;
+
+}

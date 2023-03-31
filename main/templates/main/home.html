@@ -1,0 +1,9 @@
+{% extends 'main/base.html' %}
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+<h1>НУЖНО СОКРАТИТЬ ССЫЛКУ?</h1>
+<h3>Сделаем, просто нажмите на кнопку ниже</h3>
+<div style="margin-top: 50px;">
+    <a href="{% url 'profile' %}"><button class="btn">Личный кабинет</button></a>
+</div>
+{% endblock %}

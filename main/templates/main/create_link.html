@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Мои ссылки{% endblock %}
+
+{% block content %}
+<h1>СОКРАЩЕНИЕ ССЫЛКИ</h1>
+<h3>Введите ссылку в первом поле и короткую во втором поле</h3>
+<form class="forms" method="post">
+    {% csrf_token %} 
+    {{ form }}
+    <button class="btn" type="submite">Сократить ссылку</button>
+</form>
+
+
+<div class="mylinks">
+    <h2>ВСЕ ССЫЛКИ ПОЛЬЗОВАТЕЛЯ <span style="text-transform: uppercase; color: #0e63e2">{{ view.kwargs.username }}</span></h2>
+{% if link %}    
+    
+    {% for el in link %}
+        <a target="_blank" href="{{ el.fulllink }}"><i class="fa-solid fa-link logo"></i> link/{{ el.shortlink }}</a>
+    {% endfor %} 
+{% else %}
+<p>
+    <br>У вас еще нет сокращенных ссылок
+</p>
+{% endif %} 
+</div>
+
+
+    <!-- {%% if links}
+    {% for link in links %}
+    <h2>{{ link.shortlink }}</h2>
+    <p>{{ link.fulllink }}</p>
+    {% endfor %} -->
+
+{% endblock %}
